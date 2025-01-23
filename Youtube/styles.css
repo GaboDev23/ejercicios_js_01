@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    width: 100dvw;
+}
+
+header {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100vw;
+}
+
+.navegacion {
+    height: 0;
+    width: 0;
+    position: fixed;
+    left: 0;
+    background-color: #f1f1f1;
+    transition: width 0.3s;
+    border-right: 1px solid #ccc;
+}
+
+.navegacion label input[type='checkbox'] {
+    display: none;
+}
+
+.navegacion label .toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.navegacion label .toggle:hover {
+    background-color: #bbb;
+}
+
+.navegacion ul {
+    display: none;
+    flex-direction: column;
+    height: 40%;
+    width: 250px;
+    justify-content: space-around;
+    padding: 10px;
+    list-style: none;
+}
+
+
+.navegacion label:has(input[type='checkbox']:checked) ~ ul {
+    display: flex;
+}
+
+.navegacion:has(input[type='checkbox']:checked) {
+    height: 100%;
+    width: 30%;
+}
+
+.navegacion .menu .logo {
+    width: 70%;
+    position: absolute;
+    top: 3px;
+    left: 15%;
+}
+
+.navegacion .menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    width: 80%;
+    display: block;
+}
+
+.navegacion .menu li a:hover {
+    background-color: #ccc;
+}
+
+header > .logo {
+    align-self: center;
+    margin-left: 20px;
+}
+
+header form {
+    display: flex;
+    width: 30%;
+}
+
+header form input[type='search'] {
+    width: 80%;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 20px;
+}
+
+header form button {
+    width: 20%;
+    height: 50px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
+header .iconos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+header .iconos i {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+header .iconos i:hover:not(:last-child) {
+    background-color: #ccc;
+}
+
+header .iconos i:last-child {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .categorias {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+main .categorias a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    background-color: #ddd;
+}
+
+main .categorias a:hover {
+    background-color: #ccc;
+}
+
+main .videos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+main .videos > a {
+    text-decoration: none;
+    color: #333;
+}
+
+main .video {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+main .video iframe {
+    border-radius: 10px;
+    width: 100%;
+}
+
+main .video h3 {
+    font-size: 20px;;
+}
+
+.video h3, .video p {
+    align-self: start;
+    text-align: center;
+}
+
+main video .info-video {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+}
