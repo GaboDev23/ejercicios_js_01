@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Piramide</title>
+    <title>Generador de Piramide de carácteres</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Generador de Pirámide de carácteres</h1>
+
+    <form>
+        <input type="number" id="altura" placeholder="Altura de la piramide">
+        <input type="text" id="caracter" placeholder="Caracter de la piramide" minlength="1" maxlength="1">
+        <input type="text" name="posicion" placeholder="Posicion de la piramide (1: arriba, 2: abajo)" id="posicion">
+        <button type="button" id="generar">Generar Piramide</button>
+    </form>
+
+    <div class="piramide" id="piramide">
+
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
